@@ -1,0 +1,363 @@
+<?xml version="1.0" ?>
+<robot name="Robotic" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<xacro:property name="body_color" value="Gazebo/Silver" />
+
+<!-- Silver RGBA -->
+<xacro:property name="rgba_silver"  value="0.70 0.70 0.70 1" />
+<!-- Chassis green RGBA (matches RViz chassis_green) -->
+<xacro:property name="rgba_green"   value="0.12 0.55 0.18 1" />
+<!-- Wheel black RGBA (matches RViz wheel_black) -->
+<xacro:property name="rgba_black"   value="0.06 0.06 0.06 1" />
+
+<gazebo reference="base_link">
+  <visual>
+    <material>
+      <ambient>${rgba_green}</ambient>
+      <diffuse>${rgba_green}</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+    </material>
+  </visual>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <self_collide>true</self_collide>
+  <gravity>true</gravity>
+</gazebo>
+
+<gazebo reference="top_body_1">
+  <visual>
+    <material>
+      <ambient>${rgba_green}</ambient>
+      <diffuse>${rgba_green}</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+    </material>
+  </visual>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <self_collide>true</self_collide>
+</gazebo>
+
+<gazebo reference="motherboard_1">
+  <visual>
+    <material>
+      <ambient>${rgba_silver}</ambient>
+      <diffuse>${rgba_silver}</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+    </material>
+  </visual>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <self_collide>true</self_collide>
+</gazebo>
+
+<gazebo reference="imu_1">
+  <visual>
+    <material>
+      <ambient>${rgba_silver}</ambient>
+      <diffuse>${rgba_silver}</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+    </material>
+  </visual>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <self_collide>true</self_collide>
+</gazebo>
+
+<gazebo reference="electronic_board_cover_1">
+  <visual>
+    <material>
+      <ambient>${rgba_silver}</ambient>
+      <diffuse>${rgba_silver}</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+    </material>
+  </visual>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <self_collide>true</self_collide>
+</gazebo>
+
+<gazebo reference="switch_button_1">
+  <visual>
+    <material>
+      <ambient>${rgba_silver}</ambient>
+      <diffuse>${rgba_silver}</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+    </material>
+  </visual>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <self_collide>true</self_collide>
+</gazebo>
+
+<gazebo reference="emergency_stop_button_1">
+  <visual>
+    <material>
+      <ambient>${rgba_silver}</ambient>
+      <diffuse>${rgba_silver}</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+    </material>
+  </visual>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <self_collide>true</self_collide>
+</gazebo>
+
+<gazebo reference="battery_1">
+  <visual>
+    <material>
+      <ambient>${rgba_silver}</ambient>
+      <diffuse>${rgba_silver}</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+    </material>
+  </visual>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <self_collide>true</self_collide>
+</gazebo>
+
+<gazebo reference="rear_tyre_motor_1">
+  <visual>
+    <material>
+      <ambient>${rgba_silver}</ambient>
+      <diffuse>${rgba_silver}</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+    </material>
+  </visual>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <self_collide>true</self_collide>
+</gazebo>
+
+<gazebo reference="rear_tyre_motor_2">
+  <visual>
+    <material>
+      <ambient>${rgba_silver}</ambient>
+      <diffuse>${rgba_silver}</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+    </material>
+  </visual>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <self_collide>true</self_collide>
+</gazebo>
+
+<gazebo reference="rear_tyre_1">
+  <visual>
+    <material>
+      <ambient>${rgba_black}</ambient>
+      <diffuse>${rgba_black}</diffuse>
+      <specular>0.05 0.05 0.05 1</specular>
+    </material>
+  </visual>
+  <mu1>1.2</mu1>
+  <mu2>1.2</mu2>
+  <self_collide>true</self_collide>
+  <surface>
+    <contact>
+      <ode>
+        <kp>1000000.0</kp>
+        <kd>1.0</kd>
+        <min_depth>0.001</min_depth>
+        <max_vel>0.0</max_vel>
+      </ode>
+    </contact>
+    <friction>
+      <ode>
+        <slip1>0.0</slip1>
+        <slip2>0.0</slip2>
+      </ode>
+    </friction>
+  </surface>
+</gazebo>
+
+<gazebo reference="rear_tyre_2">
+  <visual>
+    <material>
+      <ambient>${rgba_black}</ambient>
+      <diffuse>${rgba_black}</diffuse>
+      <specular>0.05 0.05 0.05 1</specular>
+    </material>
+  </visual>
+  <mu1>1.2</mu1>
+  <mu2>1.2</mu2>
+  <self_collide>true</self_collide>
+  <surface>
+    <contact>
+      <ode>
+        <kp>1000000.0</kp>
+        <kd>1.0</kd>
+        <min_depth>0.001</min_depth>
+        <max_vel>0.0</max_vel>
+      </ode>
+    </contact>
+    <friction>
+      <ode>
+        <slip1>0.0</slip1>
+        <slip2>0.0</slip2>
+      </ode>
+    </friction>
+  </surface>
+</gazebo>
+
+<gazebo reference="front_tyre_1">
+  <visual>
+    <material>
+      <ambient>${rgba_silver}</ambient>
+      <diffuse>${rgba_silver}</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+    </material>
+  </visual>
+  <mu1>0.001</mu1>
+  <mu2>0.001</mu2>
+  <self_collide>true</self_collide>
+  <surface>
+    <contact>
+      <ode>
+        <kp>1000000.0</kp>
+        <kd>1.0</kd>
+        <min_depth>0.001</min_depth>
+        <max_vel>0.0</max_vel>
+      </ode>
+    </contact>
+    <friction>
+      <ode>
+        <slip1>0.05</slip1>
+        <slip2>0.05</slip2>
+      </ode>
+    </friction>
+  </surface>
+</gazebo>
+
+<gazebo reference="front_tyre_2">
+  <visual>
+    <material>
+      <ambient>${rgba_silver}</ambient>
+      <diffuse>${rgba_silver}</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+    </material>
+  </visual>
+  <mu1>0.001</mu1>
+  <mu2>0.001</mu2>
+  <self_collide>true</self_collide>
+  <surface>
+    <contact>
+      <ode>
+        <kp>1000000.0</kp>
+        <kd>1.0</kd>
+        <min_depth>0.001</min_depth>
+        <max_vel>0.0</max_vel>
+      </ode>
+    </contact>
+    <friction>
+      <ode>
+        <slip1>0.05</slip1>
+        <slip2>0.05</slip2>
+      </ode>
+    </friction>
+  </surface>
+</gazebo>
+
+<gazebo reference="blade_motor_1">
+  <visual>
+    <material>
+      <ambient>${rgba_silver}</ambient>
+      <diffuse>${rgba_silver}</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+    </material>
+  </visual>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <self_collide>true</self_collide>
+</gazebo>
+
+<gazebo reference="blade_1">
+  <visual>
+    <material>
+      <ambient>${rgba_silver}</ambient>
+      <diffuse>${rgba_silver}</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+    </material>
+  </visual>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <self_collide>true</self_collide>
+</gazebo>
+
+<gazebo reference="odometer_1">
+  <visual>
+    <material>
+      <ambient>${rgba_silver}</ambient>
+      <diffuse>${rgba_silver}</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+    </material>
+  </visual>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <self_collide>true</self_collide>
+</gazebo>
+
+<gazebo reference="odometer_2">
+  <visual>
+    <material>
+      <ambient>${rgba_silver}</ambient>
+      <diffuse>${rgba_silver}</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+    </material>
+  </visual>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <self_collide>true</self_collide>
+</gazebo>
+
+<gazebo reference="odometer_cover_left_1">
+  <visual>
+    <material>
+      <ambient>${rgba_silver}</ambient>
+      <diffuse>${rgba_silver}</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+    </material>
+  </visual>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <self_collide>true</self_collide>
+</gazebo>
+
+<gazebo reference="odometer_cover_right_1">
+  <visual>
+    <material>
+      <ambient>${rgba_silver}</ambient>
+      <diffuse>${rgba_silver}</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+    </material>
+  </visual>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <self_collide>true</self_collide>
+</gazebo>
+
+<gazebo reference="LiDAR_1">
+  <visual>
+    <material>
+      <ambient>${rgba_silver}</ambient>
+      <diffuse>${rgba_silver}</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+    </material>
+  </visual>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <self_collide>true</self_collide>
+</gazebo>
+
+<gazebo>
+  <plugin
+      filename="gz_ros2_control-system"
+      name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+
+    <parameters>
+      $(find lawnmover)/config/controllers.yaml
+    </parameters>
+
+  </plugin>
+</gazebo>
+
+</robot>

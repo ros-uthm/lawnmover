@@ -1,0 +1,583 @@
+<?xml version="1.0" ?>
+<robot name="Robotic" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find lawnmover)/urdf/materials.xacro" />
+<xacro:include filename="$(find lawnmover)/urdf/Robotic.ros2control" />
+<xacro:include filename="$(find lawnmover)/urdf/Robotic.gazebo" />
+
+<link name="base_footprint"/>
+
+<!-- Align ROS forward (+X) with the physical front of the CAD model. -->
+<joint name="base_footprint_to_base_link" type="fixed">
+  <origin xyz="0 0 0" rpy="0 0 1.57079632679"/>
+  <parent link="base_footprint"/>
+  <child link="base_link"/>
+</joint>
+
+<link name="base_link">
+  <inertial>
+    <origin xyz="8.580581248920662e-06 -0.019542907387817107 0.03658552092693562" rpy="0 0 0"/>
+    <mass value="34.93508217588316"/>
+    <inertia ixx="1.904747" iyy="1.007743" izz="2.764873" ixy="5.3e-05" iyz="-0.091706" ixz="-2.9e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find lawnmover)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="chassis_green"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find lawnmover)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="top_body_1">
+  <inertial>
+    <origin xyz="0.017654980692551753 0.30786706240030465 0.06037211225105721" rpy="0 0 0"/>
+    <mass value="9.919977078705204"/>
+    <inertia ixx="0.219339" iyy="0.194629" izz="0.363738" ixy="-0.0" iyz="-0.012416" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.017655 0.2665 -0.166281" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find lawnmover)/meshes/top_body_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="chassis_green"/>
+  </visual>
+  <collision>
+    <origin xyz="0.017655 0.2665 -0.166281" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find lawnmover)/meshes/top_body_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motherboard_1">
+  <inertial>
+    <origin xyz="0.00018954971024159404 -0.04815671737909372 0.00182571346129895" rpy="0 0 0"/>
+    <mass value="0.30547549443546346"/>
+    <inertia ixx="0.000545" iyy="0.00015" izz="0.000694" ixy="-1e-06" iyz="-1e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.000151 -0.041273 -0.198" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find lawnmover)/meshes/motherboard_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.000151 -0.041273 -0.198" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find lawnmover)/meshes/motherboard_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="imu_1">
+  <inertial>
+    <origin xyz="-2.2377820345726557e-17 -0.08499956692800073 0.00999999999999443" rpy="0 0 0"/>
+    <mass value="0.32365124456773336"/>
+    <inertia ixx="6.6e-05" iyy="6.6e-05" izz="0.000111" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 -0.205544 -0.198" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find lawnmover)/meshes/imu_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0 -0.205544 -0.198" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find lawnmover)/meshes/imu_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="electronic_board_cover_1">
+  <inertial>
+    <origin xyz="-8.390793912644897e-08 -0.15716523777900676 0.0010590757642855164" rpy="0 0 0"/>
+    <mass value="2.0241142371386207"/>
+    <inertia ixx="0.01662" iyy="0.00385" izz="0.020434" ixy="0.0" iyz="2e-05" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 -0.209544 -0.195" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find lawnmover)/meshes/electronic_board_cover_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0 -0.209544 -0.195" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find lawnmover)/meshes/electronic_board_cover_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="switch_button_1">
+  <inertial>
+    <origin xyz="-5.556410329653242e-16 -0.012500000000032145 0.0071274180062225745" rpy="0 0 0"/>
+    <mass value="0.19298374073034502"/>
+    <inertia ixx="2.1e-05" iyy="4.2e-05" izz="4.4e-05" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 -0.0325 -0.270531" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find lawnmover)/meshes/switch_button_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0 -0.0325 -0.270531" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find lawnmover)/meshes/switch_button_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="emergency_stop_button_1">
+  <inertial>
+    <origin xyz="-1.1547058025862643e-15 -0.010000000000033142 0.0041020541199149885" rpy="0 0 0"/>
+    <mass value="0.09548088941801776"/>
+    <inertia ixx="7e-06" iyy="1.3e-05" izz="1.4e-05" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 0.0225 -0.270531" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find lawnmover)/meshes/emergency_stop_button_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0 0.0225 -0.270531" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find lawnmover)/meshes/emergency_stop_button_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="battery_1">
+  <inertial>
+    <origin xyz="1.3452806890719966e-16 -0.07721057389467109 0.007972698479452152" rpy="0 0 0"/>
+    <mass value="10.0452810221613"/>
+    <inertia ixx="0.019541" iyy="0.040964" izz="0.057089" ixy="0.0" iyz="-0.002631" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.279116 -0.032315" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find lawnmover)/meshes/battery_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.279116 -0.032315" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find lawnmover)/meshes/battery_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rear_tyre_motor_1">
+  <inertial>
+    <origin xyz="0.04095050408351533 0.03540298157788521 0.032067539827467" rpy="0 0 0"/>
+    <mass value="2.560524826080275"/>
+    <inertia ixx="0.001763" iyy="0.00207" izz="0.002736" ixy="-0.0" iyz="-0.000109" ixz="2e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.1275 -0.188599 -0.01792" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find lawnmover)/meshes/rear_tyre_motor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.1275 -0.188599 -0.01792" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find lawnmover)/meshes/rear_tyre_motor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rear_tyre_motor_2">
+  <inertial>
+    <origin xyz="-0.04095050408351539 -0.043604018422104096 0.019502539827468728" rpy="0 0 0"/>
+    <mass value="2.560524826080275"/>
+    <inertia ixx="0.001763" iyy="0.00207" izz="0.002736" ixy="0.0" iyz="-0.000109" ixz="-2e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.1275 -0.267606 -0.030485" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find lawnmover)/meshes/rear_tyre_motor_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.1275 -0.267606 -0.030485" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find lawnmover)/meshes/rear_tyre_motor_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rear_tyre_1">
+  <inertial>
+    <origin xyz="0.04072419849369893 2.931116702131753e-08 5.5632352821688436e-09" rpy="0 0 0"/>
+    <mass value="9.483268171490044"/>
+    <inertia ixx="0.038711" iyy="0.021995" izz="0.021995" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.2115 -0.224 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find lawnmover)/meshes/rear_tyre_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="wheel_black"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.2115 -0.224 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find lawnmover)/meshes/rear_tyre_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rear_tyre_2">
+  <inertial>
+    <origin xyz="-0.46372419849369895 -2.9590921740707543e-08 -3.8041371927532985e-09" rpy="0 0 0"/>
+    <mass value="9.483268171490044"/>
+    <inertia ixx="0.038711" iyy="0.021995" izz="0.021995" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.2115 -0.224 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find lawnmover)/meshes/rear_tyre_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="wheel_black"/>
+  </visual>
+  <collision>
+    <origin xyz="0.2115 -0.224 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find lawnmover)/meshes/rear_tyre_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_tyre_1">
+  <inertial>
+    <origin xyz="4.163336342344337e-16 0.007185705204167586 -0.038621949502823105" rpy="0 0 0"/>
+    <mass value="0.6297145300990463"/>
+    <inertia ixx="0.000438" iyy="0.000377" izz="0.000187" ixy="0.0" iyz="4.7e-05" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.2025 0.234 -0.04" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find lawnmover)/meshes/front_tyre_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.2025 0.234 -0.04" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find lawnmover)/meshes/front_tyre_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_tyre_2">
+  <inertial>
+    <origin xyz="2.220446049250313e-16 0.007185705204167225 -0.0386219495028231" rpy="0 0 0"/>
+    <mass value="0.6297145300990463"/>
+    <inertia ixx="0.000438" iyy="0.000377" izz="0.000187" ixy="0.0" iyz="4.7e-05" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.2025 0.234 -0.04" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find lawnmover)/meshes/front_tyre_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.2025 0.234 -0.04" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find lawnmover)/meshes/front_tyre_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="blade_motor_1">
+  <inertial>
+    <origin xyz="0.045000000809822006 -0.07794243924366638 0.05768845947562536" rpy="0 0 0"/>
+    <mass value="10.659680269011584"/>
+    <inertia ixx="0.030799" iyy="0.030799" izz="0.018905" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.045 0.032058 -0.0245" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find lawnmover)/meshes/blade_motor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.045 0.032058 -0.0245" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find lawnmover)/meshes/blade_motor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="blade_1">
+  <inertial>
+    <origin xyz="-3.691323145453111e-08 1.1276890937716999e-07 0.0036574437329575035" rpy="0 0 0"/>
+    <mass value="0.8089249216665014"/>
+    <inertia ixx="0.002255" iyy="0.002255" izz="0.004474" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 0.11 0.0125" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find lawnmover)/meshes/blade_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 0.11 0.0125" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find lawnmover)/meshes/blade_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="odometer_1">
+  <inertial>
+    <origin xyz="0.007217520525320237 0.021291903054299288 0.007587551264943482" rpy="0 0 0"/>
+    <mass value="0.05709594931006652"/>
+    <inertia ixx="1.1e-05" iyy="3e-06" izz="1.1e-05" ixy="1e-06" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.227951 0.246486 -0.13" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find lawnmover)/meshes/odometer_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.227951 0.246486 -0.13" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find lawnmover)/meshes/odometer_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="odometer_2">
+  <inertial>
+    <origin xyz="0.010737113090464656 0.01975324377022028 0.007587551264943482" rpy="0 0 0"/>
+    <mass value="0.05709594931006652"/>
+    <inertia ixx="1.1e-05" iyy="3e-06" izz="1.1e-05" ixy="-1e-06" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.245886 0.244958 -0.13" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find lawnmover)/meshes/odometer_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.245886 0.244958 -0.13" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find lawnmover)/meshes/odometer_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="odometer_cover_left_1">
+  <inertial>
+    <origin xyz="-0.0012109615756692171 -0.05130716466293511 0.013753515252000331" rpy="0 0 0"/>
+    <mass value="0.0974690142224969"/>
+    <inertia ixx="0.000144" iyy="3.3e-05" izz="0.000155" ixy="-4e-06" iyz="-9e-06" ixz="3e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.230379 0.164 -0.135" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find lawnmover)/meshes/odometer_cover_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.230379 0.164 -0.135" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find lawnmover)/meshes/odometer_cover_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="odometer_cover_right_1">
+  <inertial>
+    <origin xyz="0.0012109615756695502 -0.05130716466293639 0.013753515252000165" rpy="0 0 0"/>
+    <mass value="0.09746901422249486"/>
+    <inertia ixx="0.000144" iyy="3.3e-05" izz="0.000155" ixy="4e-06" iyz="-9e-06" ixz="-3e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.230379 0.164 -0.135" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find lawnmover)/meshes/odometer_cover_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.230379 0.164 -0.135" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find lawnmover)/meshes/odometer_cover_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="LiDAR_1">
+  <inertial>
+    <origin xyz="-0.026000000000035647 0.025999999999967827 0.030737618109065556" rpy="0 0 0"/>
+    <mass value="1.910203205712103"/>
+    <inertia ixx="0.001649" iyy="0.001649" izz="0.000894" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.026 -0.094 -0.270531" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find lawnmover)/meshes/LiDAR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.026 -0.094 -0.270531" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find lawnmover)/meshes/LiDAR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rigid 1" type="fixed">
+  <origin xyz="-0.017655 -0.2665 0.166281" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="top_body_1"/>
+</joint>
+
+<joint name="Rigid 2" type="fixed">
+  <origin xyz="0.000151 -0.168271 0.003" rpy="0 0 0"/>
+  <parent link="electronic_board_cover_1"/>
+  <child link="motherboard_1"/>
+</joint>
+
+<joint name="Rigid 3" type="fixed">
+  <origin xyz="0.0 -0.004 0.003" rpy="0 0 0"/>
+  <parent link="electronic_board_cover_1"/>
+  <child link="imu_1"/>
+</joint>
+
+<joint name="Rigid 4" type="fixed">
+  <origin xyz="0.017655 0.476044 0.028719" rpy="0 0 0"/>
+  <parent link="top_body_1"/>
+  <child link="electronic_board_cover_1"/>
+</joint>
+
+<joint name="Rigid 6" type="fixed">
+  <origin xyz="0.017655 0.299 0.10425" rpy="0 0 0"/>
+  <parent link="top_body_1"/>
+  <child link="switch_button_1"/>
+</joint>
+
+<joint name="Rigid 7" type="fixed">
+  <origin xyz="0.017655 0.244 0.10425" rpy="0 0 0"/>
+  <parent link="top_body_1"/>
+  <child link="emergency_stop_button_1"/>
+</joint>
+
+<joint name="Rigid 8" type="fixed">
+  <origin xyz="0.0 0.279116 0.032315" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="battery_1"/>
+</joint>
+
+<joint name="Rigid 9" type="fixed">
+  <origin xyz="0.1275 0.188599 0.01792" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="rear_tyre_motor_1"/>
+</joint>
+
+<joint name="Rigid 10" type="fixed">
+  <origin xyz="-0.1275 0.267606 0.030485" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="rear_tyre_motor_2"/>
+</joint>
+
+<joint name="rear_left_wheel_joint" type="continuous">
+  <origin xyz="0.084 0.035401 0.03208" rpy="0 0 0"/>
+  <parent link="rear_tyre_motor_1"/>
+  <child link="rear_tyre_1"/>
+<axis xyz="1 0 0"/>
+</joint>
+
+<joint name="rear_right_wheel_joint" type="continuous">
+  <origin xyz="-0.084 -0.043606 0.019515" rpy="0 0 0"/>
+  <parent link="rear_tyre_motor_2"/>
+  <child link="rear_tyre_2"/>
+<axis xyz="1 0 0"/>
+</joint>
+
+<joint name="front_left_wheel_joint" type="continuous">
+  <origin xyz="0.2025 -0.234 0.04" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="front_tyre_1"/>
+  <axis xyz="1 0 0"/>
+</joint>
+
+<joint name="front_right_wheel_joint" type="continuous">
+  <origin xyz="-0.2025 -0.234 0.04" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="front_tyre_2"/>
+  <axis xyz="1 0 0"/>
+</joint>
+
+<joint name="Rigid 15" type="fixed">
+  <origin xyz="-0.045 -0.032058 0.0245" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="blade_motor_1"/>
+</joint>
+
+<joint name="blade_joint" type="continuous">
+  <origin xyz="0.045 -0.077942 -0.037" rpy="0 0 0"/>
+  <parent link="blade_motor_1"/>
+  <child link="blade_1"/>
+<axis xyz="0 0 1"/>
+</joint>
+
+<joint name="Rigid 17" type="fixed">
+  <origin xyz="0.227951 -0.246486 0.13" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="odometer_1"/>
+</joint>
+
+<joint name="Rigid 18" type="fixed">
+  <origin xyz="-0.245886 -0.244958 0.13" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="odometer_2"/>
+</joint>
+
+<joint name="Rigid 19" type="fixed">
+  <origin xyz="0.230379 -0.164 0.135" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="odometer_cover_left_1"/>
+</joint>
+
+<joint name="Rigid 20" type="fixed">
+  <origin xyz="-0.230379 -0.164 0.135" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="odometer_cover_right_1"/>
+</joint>
+
+<joint name="Rigid 21" type="fixed">
+  <origin xyz="0.043655 0.3605 0.10425" rpy="0 0 0"/>
+  <parent link="top_body_1"/>
+  <child link="LiDAR_1"/>
+</joint>
+
+</robot>

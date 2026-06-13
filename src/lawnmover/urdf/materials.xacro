@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<robot name="Robotic" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<material name="silver">
+  <color rgba="0.700 0.700 0.700 0.500"/>
+</material>
+
+<material name="chassis_green">
+  <color rgba="0.120 0.550 0.180 1.000"/>
+</material>
+
+<material name="wheel_black">
+  <color rgba="0.060 0.060 0.060 1.000"/>
+</material>
+
+</robot>

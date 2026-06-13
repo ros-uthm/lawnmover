@@ -1,0 +1,1029 @@
+<sdf version='1.11'>
+  <model name='Robotic'>
+    <link name='base_link'>
+      <inertial>
+        <pose>5.2471218640196891e-06 0.02269667821484404 0.081583929946302952 0 0 0</pose>
+        <mass>77.101537997187293</mass>
+        <inertia>
+          <ixx>3.551893067888106</ixx>
+          <ixy>6.7883650591503441e-05</ixy>
+          <ixz>-2.7827330177558539e-05</ixz>
+          <iyy>1.948607803008116</iyy>
+          <iyz>-0.16240465821616021</iyz>
+          <izz>4.3501037351001948</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_link_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:///home/hafiz/ros2_ws/install/lawnmover/share/lawnmover/meshes/base_link.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.20000000000000001</mu>
+              <mu2>0.20000000000000001</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__top_body_1_collision_1'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:///home/hafiz/ros2_ws/install/lawnmover/share/lawnmover/meshes/top_body_1.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.20000000000000001</mu>
+              <mu2>0.20000000000000001</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__LiDAR_1_collision_2'>
+        <pose>0 -5.5511151231257827e-17 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:///home/hafiz/ros2_ws/install/lawnmover/share/lawnmover/meshes/LiDAR_1.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.20000000000000001</mu>
+              <mu2>0.20000000000000001</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__electronic_board_cover_1_collision_3'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:///home/hafiz/ros2_ws/install/lawnmover/share/lawnmover/meshes/electronic_board_cover_1.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.20000000000000001</mu>
+              <mu2>0.20000000000000001</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__motherboard_1_collision_4'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:///home/hafiz/ros2_ws/install/lawnmover/share/lawnmover/meshes/motherboard_1.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.20000000000000001</mu>
+              <mu2>0.20000000000000001</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__imu_1_collision_5'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:///home/hafiz/ros2_ws/install/lawnmover/share/lawnmover/meshes/imu_1.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.20000000000000001</mu>
+              <mu2>0.20000000000000001</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__switch_button_1_collision_6'>
+        <pose>0 -5.5511151231257827e-17 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:///home/hafiz/ros2_ws/install/lawnmover/share/lawnmover/meshes/switch_button_1.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.20000000000000001</mu>
+              <mu2>0.20000000000000001</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__emergency_stop_button_1_collision_7'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:///home/hafiz/ros2_ws/install/lawnmover/share/lawnmover/meshes/emergency_stop_button_1.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.20000000000000001</mu>
+              <mu2>0.20000000000000001</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__rear_tyre_motor_2_collision_8'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:///home/hafiz/ros2_ws/install/lawnmover/share/lawnmover/meshes/rear_tyre_motor_2.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.20000000000000001</mu>
+              <mu2>0.20000000000000001</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__front_tyre_1_collision_9'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:///home/hafiz/ros2_ws/install/lawnmover/share/lawnmover/meshes/front_tyre_1.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.20000000000000001</mu>
+              <mu2>0.20000000000000001</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__front_tyre_2_collision_10'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:///home/hafiz/ros2_ws/install/lawnmover/share/lawnmover/meshes/front_tyre_2.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.20000000000000001</mu>
+              <mu2>0.20000000000000001</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__blade_motor_1_collision_11'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:///home/hafiz/ros2_ws/install/lawnmover/share/lawnmover/meshes/blade_motor_1.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.20000000000000001</mu>
+              <mu2>0.20000000000000001</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__odometer_1_collision_12'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:///home/hafiz/ros2_ws/install/lawnmover/share/lawnmover/meshes/odometer_1.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.20000000000000001</mu>
+              <mu2>0.20000000000000001</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__odometer_2_collision_13'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:///home/hafiz/ros2_ws/install/lawnmover/share/lawnmover/meshes/odometer_2.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.20000000000000001</mu>
+              <mu2>0.20000000000000001</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__odometer_cover_left_1_collision_14'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:///home/hafiz/ros2_ws/install/lawnmover/share/lawnmover/meshes/odometer_cover_left_1.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.20000000000000001</mu>
+              <mu2>0.20000000000000001</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__odometer_cover_right_1_collision_15'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:///home/hafiz/ros2_ws/install/lawnmover/share/lawnmover/meshes/odometer_cover_right_1.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.20000000000000001</mu>
+              <mu2>0.20000000000000001</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__battery_1_collision_16'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:///home/hafiz/ros2_ws/install/lawnmover/share/lawnmover/meshes/battery_1.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.20000000000000001</mu>
+              <mu2>0.20000000000000001</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__rear_tyre_motor_1_collision_17'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:///home/hafiz/ros2_ws/install/lawnmover/share/lawnmover/meshes/rear_tyre_motor_1.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.20000000000000001</mu>
+              <mu2>0.20000000000000001</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='base_link_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:///home/hafiz/ros2_ws/install/lawnmover/share/lawnmover/meshes/base_link.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Silver</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0.875 0.875 0.875 1</diffuse>
+          <ambient>0.875 0.875 0.875 1</ambient>
+        </material>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__top_body_1_visual_1'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:///home/hafiz/ros2_ws/install/lawnmover/share/lawnmover/meshes/top_body_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Silver</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0.875 0.875 0.875 1</diffuse>
+          <ambient>0.875 0.875 0.875 1</ambient>
+        </material>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__LiDAR_1_visual_2'>
+        <pose>0 -5.5511151231257827e-17 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:///home/hafiz/ros2_ws/install/lawnmover/share/lawnmover/meshes/LiDAR_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Silver</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0.875 0.875 0.875 1</diffuse>
+          <ambient>0.875 0.875 0.875 1</ambient>
+        </material>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__electronic_board_cover_1_visual_3'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:///home/hafiz/ros2_ws/install/lawnmover/share/lawnmover/meshes/electronic_board_cover_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Silver</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0.875 0.875 0.875 1</diffuse>
+          <ambient>0.875 0.875 0.875 1</ambient>
+        </material>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__motherboard_1_visual_4'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:///home/hafiz/ros2_ws/install/lawnmover/share/lawnmover/meshes/motherboard_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Silver</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0.875 0.875 0.875 1</diffuse>
+          <ambient>0.875 0.875 0.875 1</ambient>
+        </material>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__imu_1_visual_5'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:///home/hafiz/ros2_ws/install/lawnmover/share/lawnmover/meshes/imu_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Silver</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0.875 0.875 0.875 1</diffuse>
+          <ambient>0.875 0.875 0.875 1</ambient>
+        </material>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__switch_button_1_visual_6'>
+        <pose>0 -5.5511151231257827e-17 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:///home/hafiz/ros2_ws/install/lawnmover/share/lawnmover/meshes/switch_button_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Silver</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0.875 0.875 0.875 1</diffuse>
+          <ambient>0.875 0.875 0.875 1</ambient>
+        </material>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__emergency_stop_button_1_visual_7'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:///home/hafiz/ros2_ws/install/lawnmover/share/lawnmover/meshes/emergency_stop_button_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Silver</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0.875 0.875 0.875 1</diffuse>
+          <ambient>0.875 0.875 0.875 1</ambient>
+        </material>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__rear_tyre_motor_2_visual_8'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:///home/hafiz/ros2_ws/install/lawnmover/share/lawnmover/meshes/rear_tyre_motor_2.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Silver</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0.875 0.875 0.875 1</diffuse>
+          <ambient>0.875 0.875 0.875 1</ambient>
+        </material>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__front_tyre_1_visual_9'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:///home/hafiz/ros2_ws/install/lawnmover/share/lawnmover/meshes/front_tyre_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Silver</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0.875 0.875 0.875 1</diffuse>
+          <ambient>0.875 0.875 0.875 1</ambient>
+        </material>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__front_tyre_2_visual_10'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:///home/hafiz/ros2_ws/install/lawnmover/share/lawnmover/meshes/front_tyre_2.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Silver</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0.875 0.875 0.875 1</diffuse>
+          <ambient>0.875 0.875 0.875 1</ambient>
+        </material>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__blade_motor_1_visual_11'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:///home/hafiz/ros2_ws/install/lawnmover/share/lawnmover/meshes/blade_motor_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Silver</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0.875 0.875 0.875 1</diffuse>
+          <ambient>0.875 0.875 0.875 1</ambient>
+        </material>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__odometer_1_visual_12'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:///home/hafiz/ros2_ws/install/lawnmover/share/lawnmover/meshes/odometer_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Silver</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0.875 0.875 0.875 1</diffuse>
+          <ambient>0.875 0.875 0.875 1</ambient>
+        </material>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__odometer_2_visual_13'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:///home/hafiz/ros2_ws/install/lawnmover/share/lawnmover/meshes/odometer_2.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Silver</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0.875 0.875 0.875 1</diffuse>
+          <ambient>0.875 0.875 0.875 1</ambient>
+        </material>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__odometer_cover_left_1_visual_14'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:///home/hafiz/ros2_ws/install/lawnmover/share/lawnmover/meshes/odometer_cover_left_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Silver</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0.875 0.875 0.875 1</diffuse>
+          <ambient>0.875 0.875 0.875 1</ambient>
+        </material>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__odometer_cover_right_1_visual_15'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:///home/hafiz/ros2_ws/install/lawnmover/share/lawnmover/meshes/odometer_cover_right_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Silver</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0.875 0.875 0.875 1</diffuse>
+          <ambient>0.875 0.875 0.875 1</ambient>
+        </material>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__battery_1_visual_16'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:///home/hafiz/ros2_ws/install/lawnmover/share/lawnmover/meshes/battery_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Silver</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0.875 0.875 0.875 1</diffuse>
+          <ambient>0.875 0.875 0.875 1</ambient>
+        </material>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__rear_tyre_motor_1_visual_17'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:///home/hafiz/ros2_ws/install/lawnmover/share/lawnmover/meshes/rear_tyre_motor_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Silver</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0.875 0.875 0.875 1</diffuse>
+          <ambient>0.875 0.875 0.875 1</ambient>
+        </material>
+      </visual>
+      <self_collide>true</self_collide>
+      <gravity>true</gravity>
+      <self_collide>true</self_collide>
+      <self_collide>true</self_collide>
+      <self_collide>true</self_collide>
+      <self_collide>true</self_collide>
+      <self_collide>true</self_collide>
+      <self_collide>true</self_collide>
+      <self_collide>true</self_collide>
+      <self_collide>true</self_collide>
+      <self_collide>true</self_collide>
+      <self_collide>true</self_collide>
+      <self_collide>true</self_collide>
+      <self_collide>true</self_collide>
+      <self_collide>true</self_collide>
+      <self_collide>true</self_collide>
+      <self_collide>true</self_collide>
+      <self_collide>true</self_collide>
+      <self_collide>true</self_collide>
+    </link>
+    <joint name='rear_right_wheel_joint' type='revolute'>
+      <pose relative_to='base_link'>0.21149999999999999 -0.224 0.050000000000000003 0 0 0</pose>
+      <parent>base_link</parent>
+      <child>rear_tyre_2</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='rear_tyre_2'>
+      <pose relative_to='rear_right_wheel_joint'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-0.46372419849369889 -2.959092174070754e-08 -3.8041371927532994e-09 0 0 0</pose>
+        <mass>9.4832681714900442</mass>
+        <inertia>
+          <ixx>0.038711000000000002</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.021995000000000001</iyy>
+          <iyz>0</iyz>
+          <izz>0.021995000000000001</izz>
+        </inertia>
+      </inertial>
+      <collision name='rear_tyre_2_collision'>
+        <pose>-0.21149999999999999 -0.224 -0.050000000000000003 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:///home/hafiz/ros2_ws/install/lawnmover/share/lawnmover/meshes/rear_tyre_2.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.20000000000000001</mu>
+              <mu2>0.20000000000000001</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='rear_tyre_2_visual'>
+        <pose>-0.21149999999999999 -0.224 -0.050000000000000003 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:///home/hafiz/ros2_ws/install/lawnmover/share/lawnmover/meshes/rear_tyre_2.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Silver</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0.875 0.875 0.875 1</diffuse>
+          <ambient>0.875 0.875 0.875 1</ambient>
+        </material>
+      </visual>
+      <self_collide>true</self_collide>
+    </link>
+    <joint name='blade_joint' type='revolute'>
+      <pose relative_to='base_link'>0 -0.11 -0.012500000000000001 0 0 0</pose>
+      <parent>base_link</parent>
+      <child>blade_1</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='blade_1'>
+      <pose relative_to='blade_joint'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-3.6913231454531113e-08 1.1276890937717e-07 0.003657443732957504 0 0 0</pose>
+        <mass>0.80892492166650143</mass>
+        <inertia>
+          <ixx>0.0022550000000000001</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0022550000000000001</iyy>
+          <iyz>0</iyz>
+          <izz>0.0044739999999999997</izz>
+        </inertia>
+      </inertial>
+      <collision name='blade_1_collision'>
+        <pose>0 0.11 0.012500000000000001 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:///home/hafiz/ros2_ws/install/lawnmover/share/lawnmover/meshes/blade_1.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.20000000000000001</mu>
+              <mu2>0.20000000000000001</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='blade_1_visual'>
+        <pose>0 0.11 0.012500000000000001 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:///home/hafiz/ros2_ws/install/lawnmover/share/lawnmover/meshes/blade_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Silver</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0.875 0.875 0.875 1</diffuse>
+          <ambient>0.875 0.875 0.875 1</ambient>
+        </material>
+      </visual>
+      <self_collide>true</self_collide>
+    </link>
+    <joint name='rear_left_wheel_joint' type='revolute'>
+      <pose relative_to='base_link'>0.21149999999999999 0.224 0.050000000000000003 0 0 0</pose>
+      <parent>base_link</parent>
+      <child>rear_tyre_1</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='rear_tyre_1'>
+      <pose relative_to='rear_left_wheel_joint'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0.040724198493698932 2.931116702131753e-08 5.5632352821688444e-09 0 0 0</pose>
+        <mass>9.4832681714900442</mass>
+        <inertia>
+          <ixx>0.038711000000000002</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.021995000000000001</iyy>
+          <iyz>0</iyz>
+          <izz>0.021995000000000001</izz>
+        </inertia>
+      </inertial>
+      <collision name='rear_tyre_1_collision'>
+        <pose>-0.21149999999999999 -0.224 -0.050000000000000003 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:///home/hafiz/ros2_ws/install/lawnmover/share/lawnmover/meshes/rear_tyre_1.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.20000000000000001</mu>
+              <mu2>0.20000000000000001</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='rear_tyre_1_visual'>
+        <pose>-0.21149999999999999 -0.224 -0.050000000000000003 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>file:///home/hafiz/ros2_ws/install/lawnmover/share/lawnmover/meshes/rear_tyre_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Silver</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0.875 0.875 0.875 1</diffuse>
+          <ambient>0.875 0.875 0.875 1</ambient>
+        </material>
+      </visual>
+      <self_collide>true</self_collide>
+    </link>
+    <plugin name='gz_ros2_control::GazeboSimROS2ControlPlugin' filename='gz_ros2_control-system'>
+      <parameters>/home/hafiz/ros2_ws/src/lawnmover/config/controllers.yaml</parameters>
+    </plugin>
+	<plugin filename="gz-sim-diff-drive-system"
+        name="gz::sim::systems::DiffDrive">
+
+  	<left_joint>rear_left_wheel_joint</left_joint>
+
+  	<right_joint>rear_right_wheel_joint</right_joint>
+
+ 	 <wheel_separation>0.448</wheel_separation>
+
+ 	 <wheel_radius>0.05</wheel_radius>
+
+  	<topic>/cmd_vel</topic>
+
+</plugin>
+    <frame name='Rigid 21' attached_to='top_body_1'>
+      <pose>0.043654999999999999 0.36049999999999999 0.10425 0 0 0</pose>
+    </frame>
+    <frame name='LiDAR_1' attached_to='Rigid 21'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+    <frame name='Rigid 2' attached_to='electronic_board_cover_1'>
+      <pose>0.00015100000000000001 -0.168271 0.0030000000000000001 0 0 0</pose>
+    </frame>
+    <frame name='motherboard_1' attached_to='Rigid 2'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+    <frame name='Rigid 3' attached_to='electronic_board_cover_1'>
+      <pose>0 -0.0040000000000000001 0.0030000000000000001 0 0 0</pose>
+    </frame>
+    <frame name='imu_1' attached_to='Rigid 3'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+    <frame name='Rigid 4' attached_to='top_body_1'>
+      <pose>0.017655000000000001 0.47604400000000002 0.028719000000000001 0 0 0</pose>
+    </frame>
+    <frame name='electronic_board_cover_1' attached_to='Rigid 4'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+    <frame name='Rigid 6' attached_to='top_body_1'>
+      <pose>0.017655000000000001 0.29899999999999999 0.10425 0 0 0</pose>
+    </frame>
+    <frame name='switch_button_1' attached_to='Rigid 6'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+    <frame name='Rigid 7' attached_to='top_body_1'>
+      <pose>0.017655000000000001 0.24399999999999999 0.10425 0 0 0</pose>
+    </frame>
+    <frame name='emergency_stop_button_1' attached_to='Rigid 7'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+    <frame name='Rigid 1' attached_to='base_link'>
+      <pose>-0.017655000000000001 -0.26650000000000001 0.16628100000000001 0 0 0</pose>
+    </frame>
+    <frame name='top_body_1' attached_to='Rigid 1'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+    <frame name='Rigid 10' attached_to='base_link'>
+      <pose>-0.1275 0.26760600000000001 0.030485000000000002 0 0 0</pose>
+    </frame>
+    <frame name='rear_tyre_motor_2' attached_to='Rigid 10'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+    <frame name='Rigid 13' attached_to='base_link'>
+      <pose>0.20250000000000001 -0.23400000000000001 0.040000000000000001 0 0 0</pose>
+    </frame>
+    <frame name='front_tyre_1' attached_to='Rigid 13'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+    <frame name='Rigid 14' attached_to='base_link'>
+      <pose>-0.20250000000000001 -0.23400000000000001 0.040000000000000001 0 0 0</pose>
+    </frame>
+    <frame name='front_tyre_2' attached_to='Rigid 14'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+    <frame name='Rigid 15' attached_to='base_link'>
+      <pose>-0.044999999999999998 -0.032058000000000003 0.024500000000000001 0 0 0</pose>
+    </frame>
+    <frame name='blade_motor_1' attached_to='Rigid 15'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+    <frame name='Rigid 17' attached_to='base_link'>
+      <pose>0.22795099999999999 -0.24648600000000001 0.13 0 0 0</pose>
+    </frame>
+    <frame name='odometer_1' attached_to='Rigid 17'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+    <frame name='Rigid 18' attached_to='base_link'>
+      <pose>-0.24588599999999999 -0.24495800000000001 0.13 0 0 0</pose>
+    </frame>
+    <frame name='odometer_2' attached_to='Rigid 18'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+    <frame name='Rigid 19' attached_to='base_link'>
+      <pose>0.230379 -0.16400000000000001 0.13500000000000001 0 0 0</pose>
+    </frame>
+    <frame name='odometer_cover_left_1' attached_to='Rigid 19'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+    <frame name='Rigid 20' attached_to='base_link'>
+      <pose>-0.230379 -0.16400000000000001 0.13500000000000001 0 0 0</pose>
+    </frame>
+    <frame name='odometer_cover_right_1' attached_to='Rigid 20'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+    <frame name='Rigid 8' attached_to='base_link'>
+      <pose>0 0.27911599999999998 0.032315000000000003 0 0 0</pose>
+    </frame>
+    <frame name='battery_1' attached_to='Rigid 8'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+    <frame name='Rigid 9' attached_to='base_link'>
+      <pose>0.1275 0.18859899999999999 0.017919999999999998 0 0 0</pose>
+    </frame>
+    <frame name='rear_tyre_motor_1' attached_to='Rigid 9'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+  </model>
+</sdf>
