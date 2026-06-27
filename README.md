@@ -18,7 +18,8 @@ Make sure ROS 2 (Humble or Jazzy) is installed. Then run:
 ```bash
 sudo apt update
 sudo apt install ros-jazzy-rviz2\
-                 ros-jazzy-gazebo-ros-pkgs\
+                 ros-jazzy-ros-gz-sim
+                 ros-jazzy-ros-gz-bridge\
                  ros-jazzy-teleop-twist-keyboard\
                  ros-jazzy-xacro\
                  ros-jazzy-joint-state-publisher\
